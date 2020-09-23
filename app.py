@@ -8,12 +8,14 @@ print(type(mydata['data']))
 
 with open('myname.csv', 'w', newline='') as f:
     thewriter = csv.writer(f)
-    thewriter.writerow(['Name','Emails'])
+    thewriter.writerow(['Name','Emails', 'Gender'])
     for person in mydata['data']:
        names=(person['name'])
        emails=(person['email'])
+       gender=(person['gender'])
+       
        print(names)
-       thewriter.writerow([names,emails])
+       thewriter.writerow([names,emails,gender])
     
     
    
